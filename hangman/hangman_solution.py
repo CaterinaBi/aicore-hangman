@@ -123,6 +123,7 @@ class Hangman:
             self.num_lives -= 1
             # print(self.num_lives)
             print(f"Sorry, {letter} is not in the word.")
+            print(f"{self.list_visual[len(self.list_letters)]}")
             print(f"You have {self.num_lives} lives left.")
         # appends letter to list_letters
         self.list_letters.append(letter)
