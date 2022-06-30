@@ -52,23 +52,9 @@ class Hangman:
             '''
             __________
               |      |
-              |      O
-              |
-              |
-            __|____
-            ''','''
-            __________
+              |    \ O /
               |      |
-              |      O
-              |      |
-              |
-            __|____
-            ''','''
-            __________
-              |      |
-              |      O
-              |      |
-              |     /
+              |     /\\
             __|____
             ''',''' 
             __________
@@ -77,12 +63,26 @@ class Hangman:
               |      |
               |     /\\
             __|____
-            ''','''    
-            __________
+            ''','''
+             __________
               |      |
-              |    \ O /
+              |      O
               |      |
-              |     /\\
+              |     /
+            __|____
+            ''','''
+             __________
+              |      |
+              |      O
+              |      |
+              |
+            __|____
+            ''','''
+             __________
+              |      |
+              |      O
+              |
+              |
             __|____
             ''']
         # TODO 2: Print two message upon initialization:
@@ -123,7 +123,7 @@ class Hangman:
             self.num_lives -= 1
             # print(self.num_lives)
             print(f"Sorry, {letter} is not in the word.")
-            print(f"{self.list_visual[len(self.list_letters)]}")
+            print(f"{self.list_visual[self.num_lives]}")
             print(f"You have {self.num_lives} lives left.")
         # appends letter to list_letters
         self.list_letters.append(letter)
