@@ -1,0 +1,1 @@
+# Hangman (AiCore training)
