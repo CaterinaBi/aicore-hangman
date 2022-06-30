@@ -42,10 +42,17 @@ class Hangman:
     '''
     def __init__(self, word_list, num_lives=5):
         # TODO 2: Initialize the attributes as indicated in the docstring
+        self.word = random.choice(word_list)
+        # print("The random word is:", self.word)
+        self.word_guessed = list('_' * len(self.word))
+        self.num_letters = len(set(list(self.word)))
+        self.num_lives = num_lives
+        self.list_letters = []
         # TODO 2: Print two message upon initialization:
         # 1. "The mystery word has {len(self.word)} characters" (The number of letters is NOT the UNIQUE number of letters)
         # 2. {word_guessed}
-        pass
+        print(f"The mistery word has {self.num_letters} characters")
+        print(f"{self.word_guessed}")
 
     def check_letter(self, letter) -> None:
         '''
@@ -80,6 +87,8 @@ class Hangman:
         if len(letter) != 1:
             print("Please, enter just one character")
         # TODO 2. It has to be a letter that has not been tried yet. Use the list_letters attribute to check this. If it has been tried, print "{letter} was already tried".
+        elif letter in self.list_letters:
+            print(f"{letter} was already tried")
         # TODO 3: If the letter is valid, call the check_letter method
         pass
 
@@ -88,7 +97,8 @@ def play_game(word_list):
     game = Hangman(word_list, num_lives=5)
     # TODO 1: To test this task, you can call the ask_letter method
     game.ask_letter()
-    # TODO 2: To test this task, upon initialization, two messages should be printed 
+    # TODO 2: To test this task, upon initialization, two messages should be printed
+    game.__init__(word_list)
     # TODO 3: To test this task, you call the ask_letter method and check if the letter is in the word
     
     # TODO 4: Iteratively ask the user for a letter until the user guesses the word or runs out of lives
