@@ -48,6 +48,43 @@ class Hangman:
         self.num_letters = len(set(list(self.word)))
         self.num_lives = num_lives
         self.list_letters = []
+        self.list_visual = [
+            '''
+            __________
+              |      |
+              |      O
+              |
+              |
+            __|____
+            ''','''
+            __________
+              |      |
+              |      O
+              |      |
+              |
+            __|____
+            ''','''
+            __________
+              |      |
+              |      O
+              |      |
+              |     /
+            __|____
+            ''',''' 
+            __________
+              |      |
+              |      O
+              |      |
+              |     /\\
+            __|____
+            ''','''    
+            __________
+              |      |
+              |    \ O /
+              |      |
+              |     /\\
+            __|____
+            ''']
         # TODO 2: Print two message upon initialization:
         # 1. "The mystery word has {len(self.word)} characters" (The number of letters is NOT the UNIQUE number of letters)
         # 2. {word_guessed}
