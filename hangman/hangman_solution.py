@@ -43,7 +43,6 @@ class Hangman:
     def __init__(self, word_list, num_lives=5):
         # TODO 2: Initialize the attributes as indicated in the docstring
         self.word = random.choice(word_list)
-        # print("The random word is:", self.word)
         self.word_guessed = list('_' * len(self.word))
         self.num_letters = len(set(list(self.word)))
         self.num_lives = num_lives
@@ -117,17 +116,14 @@ class Hangman:
             print(f"{self.word_guessed}")
         # TODO 3: If the letter is in the word, the number of UNIQUE letters in the word that have not been guessed yet has to be reduced by 1
             self.num_letters -= 1
-            # print(self.num_letters)
         # TODO 3: If the letter is not in the word, reduce the number of lives by 1
         else:
             self.num_lives -= 1
-            # print(self.num_lives)
             print(f"Sorry, {letter} is not in the word.")
             print(f"{self.list_visual[self.num_lives]}")
             print(f"You have {self.num_lives} lives left.")
         # appends letter to list_letters
         self.list_letters.append(letter)
-        # print(self.list_letters)
         # Be careful! A letter can contain the same letter more than once. TIP: Take a look at the index() method in the string class
 
     def ask_letter(self):
