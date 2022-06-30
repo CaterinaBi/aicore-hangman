@@ -1,15 +1,9 @@
-'''
-Make sure you complete all the TODOs in this file.
-The prints have to contain the same text as indicated, don't add any more prints,
-or you will get 0 for this assignment.
-'''
 import random
 
 class Hangman:
     '''
     A Hangman Game that asks the user for a letter and checks if it is in the word.
     It starts with a default number of lives and a random word from the word_list.
-
     
     Parameters:
     ----------
@@ -41,7 +35,7 @@ class Hangman:
         Asks the user for a letter.
     '''
     def __init__(self, word_list, num_lives=5):
-        # TODO 2: Initialize the attributes as indicated in the docstring
+        # Initialises the attributes as indicated in the docstring
         self.word = random.choice(word_list)
         self.word_guessed = list('_' * len(self.word))
         self.num_letters = len(set(list(self.word)))
@@ -84,10 +78,8 @@ class Hangman:
               |
             __|____
             ''']
-        # TODO 2: Print two message upon initialization:
-        # 1. "The mystery word has {len(self.word)} characters" (The number of letters is NOT the UNIQUE number of letters)
-        # 2. {word_guessed}
-        print(f"The mistery word has {self.num_letters} characters")
+        # prints two message upon initialisation
+        print(f"The mistery word has {len(self.word)} characters")
         print(f"{self.word_guessed}")
 
     def check_letter(self, letter) -> None:
