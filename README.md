@@ -1,10 +1,10 @@
 # Hangman (AiCore training)
 
-> Hangman project that I developed as part of the AiCore AI and data engineering training. Hangman is a classic game in which a player thinks of a word and the other player tries to guess that word within a certain amount of attempts. This is an implementation of the Hangman game where the computer extracts a random word from a pre-determined list and the user tries to guess it.
+> Hangman project that I developed as part of my AI and data engineering training at [AiCore](https://www.theaicore.com/). Hangman is a classic game in which a player thinks of a word and the other player tries to guess that word within a certain amount of attempts. This is an implementation of the Hangman game where the computer extracts a random word from a pre-determined list and the user tries to guess it.
 
 ![This is an image taken from the AiCore portal](images/portal.png)
 
-The project utilises OOP principles and is therefore built around one class,`Hangman`. The `Hangman` class includes three methods: 
+The project was meant to go over and practice basic Python syntax. It utilises OOP principles and is therefore built around one class,`Hangman`. The `Hangman` class includes three methods: 
 - `__init__(self, word_list, num_lives=5)`, which initialises the attributes as indicated in the docstring;
 - `check_letter(self, letter) -> None`, which checks if the input letter provided by the user is in the random word;
 - `ask_letter(self)`, which asks the user for a letter and checks if this letter has already been tried, and if the input is correct.
