@@ -24,6 +24,12 @@ class Hangman:
         The number of lives the player has
     list_letters: list
         A list of the letters that have already been tried
+    round: int
+        The number of the round being played
+    list_visual: list
+        A list of rudimentary visuals to be displayed to mimic the original on-paper drawings
+    ascii_messages: list
+        A list of messages created using ASCII characters to be displayed in crucial moments
 
     Methods:
     -------
@@ -77,7 +83,6 @@ class Hangman:
               |
             __|____
             ''']
-        # prints messages upon initialisation
         self.ascii_messages = [
             '''
             %%    %%   %%%%%%%%   %%         %%         %%%%%%%%   
@@ -99,6 +104,7 @@ class Hangman:
             %%%%%%%%   %%%%%%%%   %%%%%%%%        %%%%%%%     %%   %%   %%%%
             '''
         ]
+        # prints messages upon initialisation
         print(f"{self.ascii_messages[0]}")
         print("WELCOME TO THE GAME OF FRUIT HANGMAN")
         print(f"The mistery word is the name of a fruit and has {len(self.word)} characters.")
