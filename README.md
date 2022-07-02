@@ -4,6 +4,15 @@
 
 ![This is an image taken from the AiCore portal](images/portal.png)
 
+The project utilises OOP principles and is therefore built around one class,`Hangman`. The `Hangman` class includes three methods: 
+- `__init__(self, word_list, num_lives=5)`, which initialises the attributes as indicated in the docstring;
+- `check_letter(self, letter) -> None`, which checks if the input letter provided by the user is in the random word;
+- `ask_letter(self)`, which asks the user for a letter and checks if this letter has already been tried, and if the input is correct.
+
+```python
+"""Insert your code here"""
+```
+
 ## Milestone 1
 
 - Answer some of these questions in the next few bullet points. What have you built? What technologies have you used? Why have you used those?
@@ -76,8 +85,32 @@ self.list_visual = [
 
 - Also don't forget to include code snippets and screenshots of the system you are building, it gives proof as well as it being an easy way to evidence your experience!
 
+```python
+"""Insert your code here"""
+```
+
 ## Milestone 4
 
 The project directory, `hangman`, therefore contains two solution .py files for this task: 
 - `hangman_solution.py`, 
 - `hangman_solution_bonus.py`, a more polished version of `hangman_solution.py`, which dispenses with the instructions of the original file, adds comments to make the code clearer, and uses more straightforward names for the attributes and methods.
+
+### Improvements to the basic game
+
+- The list of fruit was updated and now features 20 fruit name instead of just 6;
+
+```python
+while True:
+            letter = input("Please enter a letter: ")
+            if len(letter) != 1:
+                print("Please, enter just one character")
+                continue
+            # prints message if the input letter has already been tried
+            elif letter in self.list_letters:
+                print(f"{letter} was already tried")
+                continue
+            # calls the check_letter method if the input letter is valid
+            else:
+                self.check_letter(letter)
+                break
+```
