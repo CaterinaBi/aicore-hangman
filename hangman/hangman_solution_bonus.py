@@ -39,6 +39,7 @@ class Hangman:
         self.num_letters = len(set(list(self.word)))
         self.num_lives = num_lives
         self.list_letters = []
+        self.round = 0
         self.list_visual = [
             '''
             __________
@@ -103,6 +104,7 @@ class Hangman:
         print(f"The mistery word is the name of a fruit and has {len(self.word)} characters.")
         print("Can you guess it?")
         print(f"{self.word_guessed}\n")
+        #print(f"**************** ROUND NUMBER {self.round} ****************\n")
 
     def check_letter(self, letter) -> None:
         '''
@@ -128,15 +130,18 @@ class Hangman:
                     letter_index = position
                     self.word_guessed[letter_index] = letter
             # print(f"Nice! {letter} is in the word!")
-            print(f"These are the letters that you have guessed: {self.word_guessed}")
+            print(f"These are the letters that you have guessed: {self.word_guessed}\n")
             # the number of unique letters in the input word that have not been guessed yet is reduced by 1
             self.num_letters -= 1
         # reduces the number of lives by 1 if the input letter is not in the random word
         else:
             self.num_lives -= 1
-            print(f"Sorry, {letter} is not in the word.")
+            print(f"Sorry, '{letter}' is not in the word.")
             print(f"{self.list_visual[self.num_lives]}")
-            print(f"You have {self.num_lives} lives left.")
+            if self.num_lives == 1:
+                print(f"You have {self.num_lives} life left.\n")
+            else:
+                print(f"You have {self.num_lives} lives left.\n")
         # appends input letter to list_letters
         self.list_letters.append(letter)
 
@@ -151,12 +156,13 @@ class Hangman:
         # prints message if the input is more than one letter
         while True:
             letter = input("Please enter a letter. Don't use numbers and ASCII characters: ")
+            print("")
             if len(letter) != 1:
-                print("Please, enter just one character")
+                print("Please, enter just one character!")
                 continue
             # prints message if the input letter has already been tried
             elif letter in self.list_letters:
-                print(f"{letter} was already tried")
+                print(f"{letter} was already tried.")
                 continue
             # calls the check_letter method if the input letter is valid
             else:
@@ -168,11 +174,14 @@ def play_game(word_list):
     # iteratively asks the user for an input letter until the user guesses the word or runs out of lives
     # prints messages accordingly
     while True:
+        #game.round = 0
         if game.num_lives == 0:
             print(f"{game.ascii_messages[1]}")
-            print(f"The word was {game.word}")
+            print(f"The word was '{game.word}'.\n")
             break
         elif game.num_letters > 0:
+            game.round += 1
+            print(f"**************** ROUND NUMBER {game.round} ****************\n")
             game.ask_letter()
         else:
             print(f"{game.ascii_messages[2]}")
