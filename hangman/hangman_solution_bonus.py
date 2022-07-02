@@ -76,8 +76,24 @@ class Hangman:
               |
             __|____
             ''']
-        # prints two message upon initialisation
-        print(f"The mistery word has {len(self.word)} characters")
+        # prints messages upon initialisation
+        self.ascii_messages = [
+            '''
+            %%    %%   %%%%%%%%   %%         %%         %%%%%%%%   
+            %%    %%   %%         %%         %%         %%    %%   
+            %%%%%%%%   %%%%%      %%         %%         %%    %%   
+            %%    %%   %%         %%         %%         %%    %%           
+            %%    %%   %%%%%%%%   %%%%%%%%   %%%%%%%%   %%%%%%%%   
+            ''','''
+            %%    %%   %%%%%%%%   %%    %%       %%         %%%%%%%%   %%%%%%%%   %%%%%%%%
+            %%    %%   %%    %%   %%    %%       %%         %%    %%   %%         %%
+            %%%%%%%%   %%    %%   %%    %%       %%         %%    %%   %%%%%%%%   %%%%%
+                  %%   %%    %%   %%    %%       %%         %%    %%         %%   %%
+            %%%%%%%%   %%%%%%%%   %%%%%%%%       %%%%%%%%   %%%%%%%%   %%%%%%%%   %%%%%%%%
+            '''
+        ]
+        print(f"{self.ascii_messages[0]}")
+        print(f"The mistery word has {len(self.word)} characters.")
         print(f"{self.word_guessed}")
 
     def check_letter(self, letter) -> None:
@@ -145,7 +161,8 @@ def play_game(word_list):
     # prints messages accordingly
     while True:
         if game.num_lives == 0:
-            print(f"You lost! The word was {game.word}")
+            print(f"{game.ascii_messages[1]}")
+            print(f"The word was {game.word}")
             break
         elif game.num_letters > 0:
             game.ask_letter()
