@@ -127,15 +127,19 @@ class Hangman:
         '''
         # asks the user for a letter and assigns it to a variable called `letter`
         # prints message if the input is more than one letter
-        letter = input("Please enter a letter: ")
-        if len(letter) != 1:
-            print("Please, enter just one character")
-        # prints message if the input letter has already been tried
-        elif letter in self.list_letters:
-            print(f"{letter} was already tried")
-        # calls the check_letter method if the input letter is valid
-        else:
-            self.check_letter(letter)
+        while True:
+            letter = input("Please enter a letter: ")
+            if len(letter) != 1:
+                print("Please, enter just one character")
+                continue
+            # prints message if the input letter has already been tried
+            elif letter in self.list_letters:
+                print(f"{letter} was already tried")
+                continue
+            # calls the check_letter method if the input letter is valid
+            else:
+                self.check_letter(letter)
+                break
 
 def play_game(word_list):
     game = Hangman(word_list, num_lives=5)
