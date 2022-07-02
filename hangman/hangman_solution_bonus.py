@@ -96,7 +96,7 @@ class Hangman:
         print("WELCOME TO THE GAME OF FRUIT HANGMAN")
         print(f"The mistery word is the name of a fruit and has {len(self.word)} characters.")
         print("Can you guess it?")
-        print(f"{self.word_guessed}")
+        print(f"{self.word_guessed}\n")
 
     def check_letter(self, letter) -> None:
         '''
@@ -114,15 +114,15 @@ class Hangman:
         # uses the lower() method to convert the input letter to lowercase
         letter = letter.lower()
         if letter in self.word:
-            print(f"The letter {letter} is in the word to be guessed!")
+            print(f"Nice job! The letter '{letter}' is in the word to be guessed!")
             # replaces the '_' in the word_guessed list with the input letter when the input letter is in the random word
             letter_index = 0
             for position, char in enumerate(self.word):
                 if char == letter:
                     letter_index = position
                     self.word_guessed[letter_index] = letter
-            print(f"Nice! {letter} is in the word!")
-            print(f"{self.word_guessed}")
+            # print(f"Nice! {letter} is in the word!")
+            print(f"These are the letters that you have guessed: {self.word_guessed}")
             # the number of unique letters in the input word that have not been guessed yet is reduced by 1
             self.num_letters -= 1
         # reduces the number of lives by 1 if the input letter is not in the random word
@@ -144,7 +144,7 @@ class Hangman:
         # asks the user for a letter and assigns it to a variable called `letter`
         # prints message if the input is more than one letter
         while True:
-            letter = input("Please enter a letter: ")
+            letter = input("Please enter a letter. Numbers and ASCII characters are not allowed: ")
             if len(letter) != 1:
                 print("Please, enter just one character")
                 continue
