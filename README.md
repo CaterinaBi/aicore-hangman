@@ -44,4 +44,4 @@
 
 The project directory, `hangman`, therefore contains two solution .py files for this task: 
 - `hangman_solution.py`, 
-- `hangman_solution_bonus.py`, a more polished version of `hangman_solution.py`, which lacks the instructions of the original file, adds comments to make the code clearer, and uses more straightforward names for the attributes and methods.
+- `hangman_solution_bonus.py`, a more polished version of `hangman_solution.py`, which dispenses with the instructions of the original file, adds comments to make the code clearer, and uses more straightforward names for the attributes and methods.
