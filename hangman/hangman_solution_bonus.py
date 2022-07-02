@@ -90,6 +90,12 @@ class Hangman:
             %%%%%%%%   %%    %%   %%    %%       %%         %%    %%   %%%%%%%%   %%%%%
                   %%   %%    %%   %%    %%       %%         %%    %%         %%   %%
             %%%%%%%%   %%%%%%%%   %%%%%%%%       %%%%%%%%   %%%%%%%%   %%%%%%%%   %%%%%%%%
+            ''','''
+            %%    %%   %%%%%%%%   %%    %%       %%      %%   %%   %%     %%
+            %%    %%   %%    %%   %%    %%       %%      %%   %%   %%%%   %%
+            %%%%%%%%   %%    %%   %%    %%       %%  %%  %%   %%   %% %%  %%
+                  %%   %%    %%   %%    %%       %%  %%  %%   %%   %%  %% %%
+            %%%%%%%%   %%%%%%%%   %%%%%%%%        %%%%%%%     %%   %%   %%%%
             '''
         ]
         print(f"{self.ascii_messages[0]}")
@@ -144,7 +150,7 @@ class Hangman:
         # asks the user for a letter and assigns it to a variable called `letter`
         # prints message if the input is more than one letter
         while True:
-            letter = input("Please enter a letter. Numbers and ASCII characters are not allowed: ")
+            letter = input("Please enter a letter. Don't use numbers and ASCII characters: ")
             if len(letter) != 1:
                 print("Please, enter just one character")
                 continue
@@ -169,7 +175,7 @@ def play_game(word_list):
         elif game.num_letters > 0:
             game.ask_letter()
         else:
-            print("Congratulations! You won!")
+            print(f"{game.ascii_messages[2]}")
             break
 
 if __name__ == '__main__':
