@@ -22,8 +22,44 @@
 
 - Example below:
 
-```bash
-/bin/kafka-topics.sh --list --zookeeper 127.0.0.1:2181
+```python
+"""self.list_visual = [
+            '''
+            __________
+              |      |
+              |    \ O /
+              |      |
+              |     /\\
+            __|____
+            ''',''' 
+            __________
+              |      |
+              |      O
+              |      |
+              |     /\\
+            __|____
+            ''','''
+             __________
+              |      |
+              |      O
+              |      |
+              |     /
+            __|____
+            ''','''
+             __________
+              |      |
+              |      O
+              |      |
+              |
+            __|____
+            ''','''
+             __________
+              |      |
+              |      O
+              |
+              |
+            __|____
+            ''']
 ```
 
 - The above command is used to check whether the topic has been created successfully, once confirmed the API script is edited to send data to the created kafka topic. The docker container has an attached volume which allows editing of files to persist on the container. The result of this is below:
