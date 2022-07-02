@@ -23,7 +23,7 @@
 - Example below:
 
 ```python
-"""self.list_visual = [
+self.list_visual = [
             '''
             __________
               |      |
