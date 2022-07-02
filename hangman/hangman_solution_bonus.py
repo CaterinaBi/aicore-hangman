@@ -93,7 +93,9 @@ class Hangman:
             '''
         ]
         print(f"{self.ascii_messages[0]}")
-        print(f"The mistery word has {len(self.word)} characters.")
+        print("WELCOME TO THE GAME OF FRUIT HANGMAN")
+        print(f"The mistery word is the name of a fruit and has {len(self.word)} characters.")
+        print("Can you guess it?")
         print(f"{self.word_guessed}")
 
     def check_letter(self, letter) -> None:
