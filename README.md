@@ -13,7 +13,7 @@ Being a command line application, the program can be executed using the `Python3
 
 Upon initialisation, the user is informed of the length of the randomly selected word to be guessed, which is presented to them as an empty list along the lines of that in the following image.
 
-![This is an image of the messages that are printed upon initialisation of the program](opening_message.png)
+![This is an image of the messages that are printed upon initialisation of the program](images/opening_message.png)
 
 The user is then asked to guess a single letter and input it in the programme repeatedly, until they either win or lose the game. Messages are displayed throughout, as I discuss in what follows.
 
