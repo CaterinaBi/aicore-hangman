@@ -41,9 +41,7 @@ To test the code, the `ask_letter()` method could called within the `play_game` 
 
 ## Milestone 2
 
-- Does what you have built in this milestone connect to the previous one? If so explain how. What technologies are used? Why have you used them? Have you run any commands in the terminal? If so insert them using backticks (To get syntax highlighting for code snippets add the language after the first backticks).
-
-- Example below:
+All required functionalities implemented in M2 are marked in `hangman_solution.py` as `# TODO 2`.
 
 ```python
 self.list_visual = [
