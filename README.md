@@ -110,46 +110,40 @@ The diagrams in the list are in reverse order with respect to their appearence i
 
 ## Milestone 3
 
-In M3, all `# TODO 3` tasks had to be implemented, which were virtually all within the `check_letter` function.
+In M3, all `# TODO 3` tasks had to be implemented, which were virtually all within the `check_letter()` method.
 
-
+Given that the predetermined list of words to be guessed only contains lowercase letters, `check_letter()` first converts the input into lowercase characters using the `lower()` method. Subsequently, the method checks whether the input letter is in the random word to be guessed using an if-statement:
 
 ```python
-def check_letter(self, letter) -> None:
-        '''
-        Checks if the letter is in the word.
-        If it is, it replaces the '_' in the word_guessed list with the letter.
-        If it is not, it reduces the number of lives by 1.
-
-        Parameters:
-        ----------
-        letter: str
-            The letter to be checked
-
-        '''
-# TODO 3: Check if the letter is in the word. TIP: You can use the lower() method to convert the letter to lowercase
-        letter = letter.lower()
+letter = letter.lower()
         if letter in self.word:
             print(f"The letter {letter} is in the word to be guessed!")
-        # TODO 3: If the letter is in the word, replace the '_' in the word_guessed list with the letter
-            letter_index = 0
+```
+If the letter is indeed in the word to be guessed, the respective `'_'` in the `word_guessed` list is replaced with the letter. Relevant messages are then printed accordingly.
+
+```python
+letter_index = 0
             for position, char in enumerate(self.word):
                 if char == letter:
                     letter_index = position
                     self.word_guessed[letter_index] = letter
             print(f"Nice! {letter} is in the word!")
-            print(f"{self.word_guessed}")
-        # TODO 3: If the letter is in the word, the number of UNIQUE letters in the word that have not been guessed yet has to be reduced by 1
-            self.num_letters -= 1
-        # TODO 3: If the letter is not in the word, reduce the number of lives by 1
-        else:
+            print(f"{self.word_guessed}") 
+```
+
+Conversely, when the input letter is not in the word to be guessed, the programme executes the else-statement below, which reduces the number of lives by 1, and prints messages accordingly: 
+
+```python
+else:
             self.num_lives -= 1
             print(f"Sorry, {letter} is not in the word.")
             print(f"{self.list_visual[self.num_lives]}")
             print(f"You have {self.num_lives} lives left.")
-        # appends letter to list_letters
-        self.list_letters.append(letter)
 ```
+
+In all cases, the input letter is appended to the list of letters tried by the user, `list_letters`, using the `self.list_letters.append(letter)` command.
+
+As for all previous methods, `check_letter()` can be tested by calling it within the `play_game()` function.
 
 ## Milestone 4
 
