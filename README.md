@@ -182,12 +182,7 @@ The code in `hangman_solution.py` was updated to make the code more lisible and 
 - The list of fruit was updated and now features 20 fruit names instead of just 6;
 - all `# TODO` instructions were deleted;
 - meaningful comments were added to make the code more straightforward;
-- 
-
-
-```python
-
-```
+- messages to be displayed during crucial moment of the game were added, which I decided to store in a new attribute of the `__init__` class, the `ascii_messages` list. This contains three messages, 'hello, 'you lose' and 'you win', which have the following forms:
 
 ```python
 self.ascii_messages = [
@@ -212,3 +207,8 @@ self.ascii_messages = [
             '''
         ]
 ```
+When printed, the messages are rendered as shown in the image below:
+
+<p align="center">
+<img src="images/you_lose.png" alt="This is another image of the messages that are printed when the user loses the game" width="400" height="200" />
+</p>
