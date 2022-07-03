@@ -213,3 +213,9 @@ When printed, the messages are rendered as shown in the image below:
 <p align="center">
 <img src="images/you_lose.png" alt="This is another image of the messages that are printed when the user loses the game" width="800" height="200" />
 </p>
+
+> Overall, this capstone was a good exercise to go over the basics of Python programming, and one that I recommend to anyone who might feel a bit rusty after months without coding.
+
+## Bonus features
+
+I shall made a demo of the game available on my [YouTube channel](https://www.youtube.com/channel/UCSV7T-Axt_hqe6rV_7T-KUg/videos) shortly.
