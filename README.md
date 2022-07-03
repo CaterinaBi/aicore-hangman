@@ -36,7 +36,7 @@ if len(letter) != 1:
 To test the code, the `ask_letter()` method could called within the `play_game()` function. In case of a wrong input of more than one character, the programme was instructed to print the following message:
 
 <p align="center">
-<img src="images/one_character.png" alt="This is an image of the messages that are printed upon initialisation of the program" width="400" height="80" />
+<img src="images/one_character.png" alt="This is an image of the message that is printed when the user enters an input of more than one character" width="400" height="80" />
 </p>
 
 ## Milestone 2
@@ -105,7 +105,7 @@ self.list_visual = [
 The diagrams in the list are in reverse order with respect to their appearence in the code, so as to be callable passing the number of lives (4 to 0) as the index of `self.list_visual`. For instance, once the user loses their first life, they're left with 4 lives. At that point, `print(f"{self.list_visual[self.num_lives]}")` prints the fifth element in `self.list_visual`, which is rendered as follows.
 
 <p align="center">
-<img src="images/four_lives.png" alt="This is an image of the messages that are printed upon initialisation of the program" width="400" height="200" />
+<img src="images/four_lives.png" alt="This is an image of the messages printed when the user loses their first life" width="400" height="200" />
 </p>
 
 ## Milestone 3
@@ -147,7 +147,30 @@ As for all previous methods, `check_letter()` can be tested by calling it within
 
 ## Milestone 4
 
-It has to be noted that the project directory, `hangman`, therefore contains two solution .py files for this task: 
+M4 implements all functionalities marked as `# TODO 4` in the template, which basically creates the logic behind the game by asking the user for a letter iteratively until the user either guesses the word or run out of lives. Messages are displayed accordingly, here I reproduce the message displayed when no lives are left.
+
+<p align="center">
+<img src="images/you_lost.png" alt="This is an image of the messages that are printed when the user loses the game" width="400" height="200" />
+</p>
+
+I decided to enclose this part of the code in a while-statement, as follows:
+
+```python
+# TODO 4: Iteratively ask the user for a letter until the user guesses the word or runs out of lives
+    # If the user guesses the word, print "Congratulations, you won!"
+    # If the user runs out of lives, print "You ran out of lives. The word was {word}"
+    while True:
+        if game.num_lives == 0:
+            print(f"You lost! The word was {game.word}")
+            break
+        elif game.num_letters > 0:
+            game.ask_letter()
+        else:
+            print("Congratulations! You won!")
+            break
+```
+
+It has to be noted that the project directory, `hangman`, therefore contains two .py files for this task: 
 - `hangman_solution.py`, 
 - `hangman_solution_bonus.py`, a more polished version of `hangman_solution.py`, which dispenses with the instructions of the original file, adds comments to make the code clearer, and uses more straightforward names for the attributes and methods. I discuss this in the following section.
 
