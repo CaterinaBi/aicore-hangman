@@ -210,5 +210,5 @@ self.ascii_messages = [
 When printed, the messages are rendered as shown in the image below:
 
 <p align="center">
-<img src="images/you_lose.png" alt="This is another image of the messages that are printed when the user loses the game" width="400" height="200" />
+<img src="images/you_lose.png" alt="This is another image of the messages that are printed when the user loses the game" width="800" height="200" />
 </p>
