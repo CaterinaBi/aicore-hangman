@@ -53,7 +53,7 @@ All required functionalities implemented in M2 are marked in `hangman_solution.p
         print(f"The mistery word has {self.num_letters} characters")
         print(f"{self.word_guessed}")
 ```
-`word` is an attribute of the string type assigned to a word chosen randomly by the machine from `word_list`, a list that contains the following 6 elements: `['apple', 'banana', 'orange', 'pear', 'strawberry', 'watermelon']`. For this random selection to be possible, I imported the `random` package. `word_guessed` is a list attribute that contains as many `'_'` strings as there are characters in the randomly picked word; for this, I decided to use the `len()` string method. `num_letters` stores the number of *unique* letters in the word that have not been guessed yet as an integer. To do so, I first converted `word` into a list type using the `list()` method, and then used `len()` on the unique *unique* letters within it, which I singled out using the `set()` method. Finally, I initialised `num_lives`, the number of lives left, as an integer set later in the program as 5, and `list_letters` as a list to which all letters tried by the user are appended during the game.
+`word` is an attribute of the string type assigned to a word chosen randomly by the machine from `word_list`, a list that contains the following 6 elements: `['apple', 'banana', 'orange', 'pear', 'strawberry', 'watermelon']`. For this random selection to be possible, I imported the `random` package. `word_guessed` is a list attribute that contains as many `'_'` strings as there are characters in the randomly picked word; for this, I decided to use the `len()` string method. `num_letters` stores the number of *unique* letters in the word that have not been guessed yet as an integer. To do so, I first converted `word` into a list type using the `list()` method, and then used `len()` on the unique *unique* letters within it, which I singled out using the `set()` method. Finally, I initialised `num_lives`, the number of lives left, as an integer set later in the program as 5, and `list_letters` as a list to which all letters tried by the user are appended during the game. As required in the template, the programme runs `print(f"{letter} was already tried")` if the letter tried by the user is already in `list_letters`.
 
 To check whether the `__init__` method worked, `__init__(word_list)` was called within the `play_game()` function, thus initialising the messages seen in the introduction, which I repeat below.
 
@@ -110,19 +110,52 @@ The diagrams in the list are in reverse order with respect to their appearence i
 
 ## Milestone 3
 
-- Continue this process for every milestone, making sure to display clear understanding of each task and the concepts behind them as well as understanding of the technologies used.
+In M3, all `# TODO 3` tasks had to be implemented, which were virtually all within the `check_letter` function.
 
-- Also don't forget to include code snippets and screenshots of the system you are building, it gives proof as well as it being an easy way to evidence your experience!
+
 
 ```python
-"""Insert your code here"""
+def check_letter(self, letter) -> None:
+        '''
+        Checks if the letter is in the word.
+        If it is, it replaces the '_' in the word_guessed list with the letter.
+        If it is not, it reduces the number of lives by 1.
+
+        Parameters:
+        ----------
+        letter: str
+            The letter to be checked
+
+        '''
+# TODO 3: Check if the letter is in the word. TIP: You can use the lower() method to convert the letter to lowercase
+        letter = letter.lower()
+        if letter in self.word:
+            print(f"The letter {letter} is in the word to be guessed!")
+        # TODO 3: If the letter is in the word, replace the '_' in the word_guessed list with the letter
+            letter_index = 0
+            for position, char in enumerate(self.word):
+                if char == letter:
+                    letter_index = position
+                    self.word_guessed[letter_index] = letter
+            print(f"Nice! {letter} is in the word!")
+            print(f"{self.word_guessed}")
+        # TODO 3: If the letter is in the word, the number of UNIQUE letters in the word that have not been guessed yet has to be reduced by 1
+            self.num_letters -= 1
+        # TODO 3: If the letter is not in the word, reduce the number of lives by 1
+        else:
+            self.num_lives -= 1
+            print(f"Sorry, {letter} is not in the word.")
+            print(f"{self.list_visual[self.num_lives]}")
+            print(f"You have {self.num_lives} lives left.")
+        # appends letter to list_letters
+        self.list_letters.append(letter)
 ```
 
 ## Milestone 4
 
-The project directory, `hangman`, therefore contains two solution .py files for this task: 
+It has to be noted that the project directory, `hangman`, therefore contains two solution .py files for this task: 
 - `hangman_solution.py`, 
-- `hangman_solution_bonus.py`, a more polished version of `hangman_solution.py`, which dispenses with the instructions of the original file, adds comments to make the code clearer, and uses more straightforward names for the attributes and methods.
+- `hangman_solution_bonus.py`, a more polished version of `hangman_solution.py`, which dispenses with the instructions of the original file, adds comments to make the code clearer, and uses more straightforward names for the attributes and methods. I discuss this in the following section.
 
 ### Improvements to the basic game
 
