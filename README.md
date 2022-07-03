@@ -43,6 +43,18 @@ To test the code, the `ask_letter()` method could called within the `play_game` 
 
 All required functionalities implemented in M2 are marked in `hangman_solution.py` as `# TODO 2`.
 
+```python
+ def __init__(self, word_list, num_lives=5):
+        # TODO 2: Initialize the attributes as indicated in the docstring
+        self.word = random.choice(word_list)
+        self.word_guessed = list('_' * len(self.word))
+        self.num_letters = len(set(list(self.word)))
+        self.num_lives = num_lives
+        self.list_letters = []
+        print(f"The mistery word has {self.num_letters} characters")
+        print(f"{self.word_guessed}")
+```
+
 As a bonus task, we were invited to find a way to print diagrams that resembled the classic Handman drawings. My solution to the challenge was to create the following list of visuals, which I called `self.list_visual`.
 
 ```python
