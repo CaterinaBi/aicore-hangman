@@ -25,12 +25,12 @@ The user is then asked to guess a single letter and input it in the programme re
 
 ## Milestone 1
 
-- Answer some of these questions in the next few bullet points. What have you built? What technologies have you used? Why have you used those?
-
-- Example: The FastAPI framework allows for fast and easy construction of APIs and is combined with pydantic, which is used to assert the data types of all incoming data to allow for easier processing later on. The server is ran locally using uvicorn, a library for ASGI server implementation.
+The basic logic of the Hangman game was provided in a publicly accessible [template](https://github.com/IvanYingX/Hangman_Test) by AiCore.
   
 ```python
-"""Insert your code here"""
+letter = input("Please enter a letter: ")
+if len(letter) != 1:
+    print("Please, enter just one character")
 ```
 
 > Insert an image/screenshot of what you have built so far here.
