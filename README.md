@@ -119,7 +119,7 @@ letter = letter.lower()
         if letter in self.word:
             print(f"The letter {letter} is in the word to be guessed!")
 ```
-If the letter is indeed in the word to be guessed, the respective `'_'` in the `word_guessed` list is replaced with the letter. Relevant messages are then printed accordingly.
+If the letter is indeed in the word to be guessed, the respective `'_'` in the `word_guessed` list is replaced with the letter. Relevant messages are then printed accordingly, which I reproduce in the scrrenshot below.
 
 ```python
 letter_index = 0
@@ -130,6 +130,10 @@ letter_index = 0
             print(f"Nice! {letter} is in the word!")
             print(f"{self.word_guessed}") 
 ```
+
+<p align="center">
+<img src="images/nice.png" alt="This is an image of the messages that are printed when the user guesses a letter correctly" width="400" height="80" />
+</p>
 
 Conversely, when the input letter is not in the word to be guessed, the programme executes the else-statement below, which reduces the number of lives by 1, and prints messages accordingly: 
 
@@ -176,6 +180,10 @@ The coding of the logic behind Hangman basically marked the end of the project. 
 
 The code in `hangman_solution.py` was updated to make the code more lisible and the game clearer and more entertaining. The basic changes were as follows:
 - The list of fruit was updated and now features 20 fruit names instead of just 6;
+- all `# TODO` instructions were deleted;
+- meaningful comments were added to make the code more straightforward;
+- 
+
 
 ```python
 
