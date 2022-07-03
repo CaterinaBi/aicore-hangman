@@ -33,7 +33,7 @@ if len(letter) != 1:
     print("Please, enter just one character")
 ```
 
-To test the code, the `ask_letter()` method could called within the `play_game` function. In case of a wrong input of more than one character, the programme was instructed to print the following message:
+To test the code, the `ask_letter()` method could called within the `play_game()` function. In case of a wrong input of more than one character, the programme was instructed to print the following message:
 
 <p align="center">
 <img src="images/one_character.png" alt="This is an image of the messages that are printed upon initialisation of the program" width="400" height="80" />
@@ -54,8 +54,13 @@ All required functionalities implemented in M2 are marked in `hangman_solution.p
         print(f"The mistery word has {self.num_letters} characters")
         print(f"{self.word_guessed}")
 ```
+To check whether the `` method worked, ``was called within the `play_game()` function, which initialised the messages seen in the introdution, which I repeat below.
 
-As a bonus task, we were invited to find a way to print diagrams that resembled the classic Handman drawings. My solution to the challenge was to create the following list of visuals, which I called `self.list_visual`.
+<p align="center">
+<img src="images/opening_message.png" alt="This is an image of the messages that are printed upon initialisation of the program" width="400" height="80" />
+</p>
+
+As a bonus task, we were additionally invited to find a way to print diagrams that resembled the classic Handman drawings. My solution to the challenge was to create the following list of visuals, which I called `self.list_visual`.
 
 ```python
 self.list_visual = [
