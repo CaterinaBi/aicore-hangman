@@ -25,7 +25,7 @@ The user is then asked to guess a single letter and input it in the programme re
 
 ## Milestone 1
 
-The basic logic of the Hangman game was provided in a publicly accessible [template](https://github.com/IvanYingX/Hangman_Test) by AiCore.
+The basic logic of the Hangman game was provided in a publicly accessible [template](https://github.com/IvanYingX/Hangman_Test) by AiCore. Milestone 1 (M1) was straightforward, and is marked in the `hangman.solution.py` file as `# TODO 1`. M1 basically only required to modify the `ask_letter()` method to ask the user to input a letter, store it in a variable called `letter`, and check whether `letter` was just one character, or more.
   
 ```python
 letter = input("Please enter a letter: ")
@@ -33,7 +33,11 @@ if len(letter) != 1:
     print("Please, enter just one character")
 ```
 
-> Insert an image/screenshot of what you have built so far here.
+To test the code, the `ask_letter()` method could called within the `play_game` function. In case of a wrong input of more than one character, the user gets the following message:
+
+<p align="center">
+<img src="images/one_character.png" alt="This is an image of the messages that are printed upon initialisation of the program" width="400" height="80" />
+</p>
 
 ## Milestone 2
 
