@@ -132,7 +132,7 @@ letter_index = 0
 ```
 
 <p align="center">
-<img src="images/nice.png" alt="This is an image of the messages that are printed when the user guesses a letter correctly" width="400" height="80" />
+<img src="images/nice.png" alt="This is an image of the messages that are printed when the user guesses a letter correctly" width="420" height="100" />
 </p>
 
 Conversely, when the input letter is not in the word to be guessed, the programme executes the else-statement below, which reduces the number of lives by 1, and prints messages accordingly: 
