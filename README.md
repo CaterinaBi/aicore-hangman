@@ -41,11 +41,10 @@ To test the code, the `ask_letter()` method could called within the `play_game()
 
 ## Milestone 2
 
-All required functionalities implemented in M2 are marked in `hangman_solution.py` as `# TODO 2`.
+All required functionalities implemented in M2 are marked in `hangman_solution.py` as `# TODO 2`. M2 required the initialisation of the program's attributes as required in the docstring. These were as below:
 
 ```python
  def __init__(self, word_list, num_lives=5):
-        # TODO 2: Initialize the attributes as indicated in the docstring
         self.word = random.choice(word_list)
         self.word_guessed = list('_' * len(self.word))
         self.num_letters = len(set(list(self.word)))
@@ -54,7 +53,9 @@ All required functionalities implemented in M2 are marked in `hangman_solution.p
         print(f"The mistery word has {self.num_letters} characters")
         print(f"{self.word_guessed}")
 ```
-To check whether the `` method worked, ``was called within the `play_game()` function, which initialised the messages seen in the introdution, which I repeat below.
+`word` is an attribute of the string type assigned to a word chosen randomly by the machine from `word_list`, a list that contains the following 6 elements: `['apple', 'banana', 'orange', 'pear', 'strawberry', 'watermelon']`. For this random selection to be possible, I imported the `random` package. `word_guessed` is a list attribute that contains as many `'_'` strings as there are characters in the randomly picked word; for this, I decided to use the `len()` string method. `num_letters` stores the number of *unique* letters in the word that have not been guessed yet as an integer. To do so, I first converted `word` into a list type using the `list()` method, and then used `len()` on the unique *unique* letters within it, which I singled out using the `set()` method. Finally, I initialised `num_lives`, the number of lives left, as an integer set later in the program as 5, and `list_letters` as a list to which all letters tried by the user are appended during the game.
+
+To check whether the `__init__` method worked, `__init__(word_list)` was called within the `play_game()` function, thus initialising the messages seen in the introduction, which I repeat below.
 
 <p align="center">
 <img src="images/opening_message.png" alt="This is an image of the messages that are printed upon initialisation of the program" width="400" height="80" />
@@ -106,14 +107,6 @@ The diagrams in the list are in reverse order with respect to their appearence i
 <p align="center">
 <img src="images/four_lives.png" alt="This is an image of the messages that are printed upon initialisation of the program" width="400" height="200" />
 </p>
-
-- The above command is used to check whether the topic has been created successfully, once confirmed the API script is edited to send data to the created kafka topic. The docker container has an attached volume which allows editing of files to persist on the container. The result of this is below:
-
-```python
-"""Insert your code here"""
-```
-
-> Insert screenshot of what you have built working.
 
 ## Milestone 3
 
