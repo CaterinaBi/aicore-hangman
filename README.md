@@ -36,7 +36,7 @@ if len(letter) != 1:
 To test the code, the `ask_letter()` method could called within the `play_game` function. In case of a wrong input of more than one character, the programme was instructed to print the following message:
 
 <p align="center">
-<img src="images/one_character.png" alt="This is an image of the messages that are printed upon initialisation of the program" width="400" height="80" />
+<img src="images/one_character.png" alt="This is an image of the messages that are printed upon initialisation of the program" width="380" height="60" />
 </p>
 
 ## Milestone 2
