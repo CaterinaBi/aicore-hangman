@@ -156,10 +156,7 @@ M4 implements all functionalities marked as `# TODO 4` in the template, which ba
 I decided to enclose this part of the code in a while-statement, as follows:
 
 ```python
-# TODO 4: Iteratively ask the user for a letter until the user guesses the word or runs out of lives
-    # If the user guesses the word, print "Congratulations, you won!"
-    # If the user runs out of lives, print "You ran out of lives. The word was {word}"
-    while True:
+while True:
         if game.num_lives == 0:
             print(f"You lost! The word was {game.word}")
             break
@@ -170,9 +167,9 @@ I decided to enclose this part of the code in a while-statement, as follows:
             break
 ```
 
-It has to be noted that the project directory, `hangman`, therefore contains two .py files for this task: 
-- `hangman_solution.py`, 
-- `hangman_solution_bonus.py`, a more polished version of `hangman_solution.py`, which dispenses with the instructions of the original file, adds comments to make the code clearer, and uses more straightforward names for the attributes and methods. I discuss this in the following section.
+The coding of the logic behind Hangman basically marked the end of the project. Nevertheless, it was possible to improve one's code for extra bonus points, which I did. Therefore, the project directory, `hangman`, contains two .py files for this task: 
+- `hangman_solution.py`, which I have been discussing so far;
+- `hangman_solution_bonus.py`, a more polished version of `hangman_solution.py`, which dispenses with the instructions of the original file, adds comments to make the code clearer, and implements more catching messages created using a combination of ASCII characters. I discuss this in the following section.
 
 ### Improvements to the basic game
 
