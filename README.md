@@ -87,7 +87,7 @@ self.list_visual = [
 The diagrams in the list are in reverse order with respect to their appearence in the code, so as to be callable passing the number of lives (4 to 0) as the index of `self.list_visual`. For instance, once the user loses their first life, they're left with 4 lives. At that point, `print(f"{self.list_visual[self.num_lives]}")` prints the fifth element in `self.list_visual`, which is rendered as follows.
 
 <p align="center">
-<img src="images/four_lives.png" alt="This is an image of the messages that are printed upon initialisation of the program" width="400" height="80" />
+<img src="images/four_lives.png" alt="This is an image of the messages that are printed upon initialisation of the program" width="400" height="200" />
 </p>
 
 - The above command is used to check whether the topic has been created successfully, once confirmed the API script is edited to send data to the created kafka topic. The docker container has an attached volume which allows editing of files to persist on the container. The result of this is below:
