@@ -166,6 +166,7 @@ while True:
             print("Congratulations! You won!")
             break
 ```
+For the sake of consistency, I did the same with the if-statement within the `check_letter()` method.
 
 The coding of the logic behind Hangman basically marked the end of the project. Nevertheless, it was possible to improve one's code for extra bonus points, which I did. Therefore, the project directory, `hangman`, contains two .py files for this task: 
 - `hangman_solution.py`, which I have been discussing so far;
@@ -173,22 +174,11 @@ The coding of the logic behind Hangman basically marked the end of the project. 
 
 ### Improvements to the basic game
 
-- The list of fruit was updated and now features 20 fruit name instead of just 6;
+The code in `hangman_solution.py` was updated to make the code more lisible and the game clearer and more entertaining. The basic changes were as follows:
+- The list of fruit was updated and now features 20 fruit names instead of just 6;
 
 ```python
-while True:
-            letter = input("Please enter a letter: ")
-            if len(letter) != 1:
-                print("Please, enter just one character")
-                continue
-            # prints message if the input letter has already been tried
-            elif letter in self.list_letters:
-                print(f"{letter} was already tried")
-                continue
-            # calls the check_letter method if the input letter is valid
-            else:
-                self.check_letter(letter)
-                break
+
 ```
 
 ```python
