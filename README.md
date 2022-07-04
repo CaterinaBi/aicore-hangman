@@ -216,6 +216,6 @@ When printed, the messages are rendered as shown in the image below:
 
 > Overall, this capstone was a good exercise to go over the basics of Python programming, and one that I recommend to anyone who might feel a bit rusty after months without coding.
 
-## Bonus features
+## 👀 Bonus features 👀
 
 I shall made a demo of the game available on my [YouTube channel](https://www.youtube.com/channel/UCSV7T-Axt_hqe6rV_7T-KUg/videos) shortly.
